@@ -1,0 +1,56 @@
+#server:
+#  compression:
+#    enabled: true
+#  port: 9110
+#
+#spring:
+#  redis:
+#    port: 32768
+#    password: redispw
+#    host: localhost
+#    database: 0
+#
+#
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/robot?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+#    username: root
+#    password: 123456
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#
+#nats:
+#  url: nats://localhost:4222
+#
+#
+#
+#
+## 0 盘前 1 早盘 2 午盘 3 休盘 4 盘后 5 收盘 6 休市
+#
+#HKEX:
+#  "{
+#      0: '09:00:00,09:29:59',
+#      1: '09:30:00,12:00:00',
+#      2: '13:00:00,16:00:00',
+#      3: '12:00:00,12:59:59'
+#  }"
+#
+#US:
+#  "{
+#      0: '16:00:00,21:29:59',
+#      1: '21:30:00,23:59:59',
+#      2: '00:00:00,04:00:00'
+#
+#  }"
+#
+#
+#MAS:
+#  "{
+#      0: '08:30:00,08:59:59',
+#      1: '09:00:00,12:29:59',
+#      2: '14:00:00,16:45:00',
+#      3: '12:30:00,14:29:59'
+#  }"
+#
+#

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zs</groupId>
+
+    <artifactId>data-source-self</artifactId>
+    <packaging>pom</packaging>
+
+    <version>1.0</version>
+    <modules>
+        <module>data-source-self-api</module>
+        <module>data-source-self-producer</module>
+        <module>data-source-self-rpc</module>
+    </modules>
+
+    <name>data-source-self</name>
+
+    <description>data-source-self</description>
+
+    <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <alibaba-cloud.version>2.2.5.RELEASE</alibaba-cloud.version>
+        <fastjson.version>2.0.8</fastjson.version>
+        <fastjson.version>2.0.8</fastjson.version>
+        <jnats.version>2.16.7</jnats.version>
+        <redisson.version>3.17.5</redisson.version>
+        <nacos.version>0.9.0.RELEASE</nacos.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <hutool-all.verison>5.8.11</hutool-all.verison>
+        <libphonenumber.version>8.12.10</libphonenumber.version>
+
+    </properties>
+
+
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>zs-nexus</id>
+            <name>nexus Repository</name>
+            <url>https://nxs.stcodes.store/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>zs-releases</id>
+            <name>ZS TEAM</name>
+            <url>https://nxs.stcodes.store/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>zs-snapshots</id>
+            <name>ZS TEAM</name>
+            <url>https://nxs.stcodes.store/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

@@ -1,0 +1,15 @@
+nats:
+  url: nats://nats:Nats_Pass_179@172.31.32.9:4222,nats://nats:Nats_Pass_179@172.31.32.9:4223,nats://nats:Nats_Pass_179@172.31.32.9:4224
+
+spring-netty:
+  port: 9999
+  host: 0.0.0.0
+  limit: 0
+  ping:
+    interval: 5
+    refresh: false
+
+
+
+topic:
+  limit: 30

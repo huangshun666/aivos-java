@@ -1,0 +1,56 @@
+server:
+  compression:
+    enabled: true
+  port: 9110
+
+spring:
+  redis:
+    cluster:
+      nodes: 172.31.38.119:6291,172.31.38.119:6292,172.31.40.142:6293,172.31.40.142:6294,172.31.32.9:6295,172.31.32.9:6296
+    password: Redis_171
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.31.38.119:3306/robot?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: te4S-s8E-T-V3v3=
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+
+nats:
+  url: nats://nats:Nats_Pass_179@172.31.32.9:4222,nats://nats:Nats_Pass_179@172.31.32.9:4223,nats://nats:Nats_Pass_179@172.31.32.9:4224
+
+
+
+
+# 0 盘前 1 早盘 2 午盘 3 休盘 4 盘后 5 收盘 6 休市
+
+HKEX:
+  "{
+      0: '09:00:00,09:29:59',     
+      1: '09:30:00,12:00:00',
+      2: '13:00:00,16:00:00',
+      3: '12:00:00,12:59:59'
+  }"
+
+US:
+  "{
+      0: '16:00:00,21:29:59',     
+      1: '21:30:00,23:59:59',
+      2: '00:00:00,04:00:00'
+
+  }"
+
+
+MAS:
+  "{
+      0: '08:30:00,08:59:59',
+      1: '09:00:00,12:29:59',
+      2: '14:00:00,16:45:00',
+      3: '12:30:00,14:29:59'
+  }"
+
+

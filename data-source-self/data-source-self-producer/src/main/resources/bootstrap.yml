@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: data-source-self
+  cloud:
+    nacos:
+      discovery:
+
+        enabled: false
+      config:
+
+        enabled: false
