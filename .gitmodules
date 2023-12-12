@@ -1,0 +1,3 @@
+[submodule "forex"]
+	path = forex
+	url = https://github.com/huangshun666/aivos-java.git
