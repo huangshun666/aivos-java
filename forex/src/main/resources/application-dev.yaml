@@ -1,0 +1,68 @@
+#server:
+#  servlet:
+#    context-path: /forex
+#  compression:
+#    enabled: true
+#  port: 9876
+#
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-request-size: 100MB
+#      max-file-size: 100MB
+#  redis:
+#    port: 32768
+#    password: redispw
+#    host: localhost
+#    database: 0
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: surpportercenter@gmail.com
+#    password: yazhpmstgxtugjvt
+#    default-encoding: utf-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B9
+#    username: root
+#    password: 123456
+#    hikari:
+#      auto-commit: true
+#    current:
+#      jdbc-url: jdbc:mysql://localhost:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B9
+#      username: root
+#      password: 123456
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#    read:
+#      jdbc-url: jdbc:mysql://localhost:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+#      username: root
+#      password: 123456
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#    write:
+#      jdbc-url: jdbc:mysql://localhost:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+#      username: root
+#      password: 123456
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#
+#minio:
+#  endpoint: http://localhost:9000
+#  accessKey: Rg4Bm5N7gLMBtM7a
+#  secretKey: Vehnys-jopmo2-fipnid
+#  bucketName: forex
+#  openAddr: http://localhost:9000
+#
+#nats:
+#  url: nats://localhost:4222

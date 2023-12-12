@@ -1,0 +1,69 @@
+server:
+  servlet:
+    context-path: /forex
+  compression:
+    enabled: true
+  port: 9876
+
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 100MB
+      max-file-size: 100MB
+  redis:
+    cluster:
+      nodes: 172.31.38.119:6291,172.31.38.119:6292,172.31.40.142:6293,172.31.40.142:6294,172.31.32.9:6295,172.31.32.9:6296
+    password: Redis_171
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: surpportercenter@gmail.com
+    password: yazhpmstgxtugjvt
+    default-encoding: utf-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://172.31.38.119:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B9
+    username: root
+    password: te4S-s8E-T-V3v3=
+    hikari:
+      auto-commit: true
+    current:
+      jdbc-url: jdbc:mysql://172.31.38.119:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B9
+      username: root
+      password: g
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    read:
+      jdbc-url: jdbc:mysql://172.31.38.119:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: te4S-s8E-T-V3v3=
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    write:
+      jdbc-url: jdbc:mysql://172.31.38.119:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: te4S-s8E-T-V3v3=
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+minio:
+  endpoint: http://172.31.38.119:9000
+  accessKey: LBLkHCDYOMpy8KXH1IAU
+  secretKey: 1XERGpiNfA211kE7NCPpcsDAIZPsijwrmpOWJiNY
+  bucketName: forex-public
+  openAddr: https://api.aivos.vip
+
+nats:
+  url: nats://nats:Nats_Pass_179@172.31.32.9:4222,nats://nats:Nats_Pass_179@172.31.32.9:4223,nats://nats:Nats_Pass_179@172.31.32.9:4224
+

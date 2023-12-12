@@ -1,0 +1,74 @@
+#server:
+#  servlet:
+#    context-path: /forex
+#  compression:
+#    enabled: true
+#  port: 9876
+#spring:
+#  profiles:
+#    active:
+#
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-request-size: 100MB
+#      max-file-size: 100MB
+#  redis:
+#    cluster:
+#      nodes: 172.30.12.111:7001,172.30.12.111:7004,172.30.12.112:7002,172.30.12.112:7005,172.30.12.113:7003,172.30.12.113:7006
+#    password: UkyRVzXEMA7QmwFb
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: surpportercenter@gmail.com
+#    password: yazhpmstgxtugjvt
+#    default-encoding: utf-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://172.22.81.255:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Tokyo
+#    username: www
+#    password: u98A8LgBrSKKwQsceHrg
+#    hikari:
+#      auto-commit: true
+#    current:
+#      jdbc-url: jdbc:mysql://172.22.81.255:3306/forex?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Tokyo
+#      username: www
+#      password: u98A8LgBrSKKwQsceHrg
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#    read:
+#      jdbc-url: jdbc:mysql://172.30.12.111:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Tokyo
+#      username: kline
+#      password: 2abDkMeZNnNNqmya9nPR
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#    write:
+#      jdbc-url: jdbc:mysql://172.30.12.111:3306/aggregate?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Tokyo
+#      username: kline
+#      password: 2abDkMeZNnNNqmya9nPR
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+9
+#
+#
+#minio:
+#  endpoint: http://172.22.81.255:9000
+#  accessKey: tqvhuCCe7e7yBbcMAJGq
+#  secretKey: 3xGMo0hTzQgJFrm8Y7kF9jwQWPefZXz4acJ9Cudn
+#  bucketName: fextsec-oss
+#  openAddr: https://res.fetsec.site/oss/
+#
+#
+#nats:
+#  url: nats://172.30.12.111:4333,nats://172.30.12.112:4333,nats://172.30.12.113:4333
+#
+#
+#
